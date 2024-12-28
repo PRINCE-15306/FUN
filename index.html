@@ -4,46 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wholesome Texts</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #ffc0e3;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    .container {
-      background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      max-width: 400px;
-    }
-    .container h1 {
-      font-size: 1.5rem;
-      margin-bottom: 15px;
-    }
-    .container p {
-      font-size: 1rem;
-      color: #555;
-      margin-bottom: 20px;
-    }
-    .copy-button {
-      padding: 10px 20px;
-      font-size: 1rem;
-      color: #fff;
-      background-color: #007BFF;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .copy-button:hover {
-      background-color: #0056b3;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
@@ -51,38 +12,6 @@
     <p id="text"></p>
     <button class="copy-button" onclick="copyText()">Copy Text</button>
   </div>
-
-  <script>
-    const wholesomePhrases = [
-      "You are an amazing person, and you make the world brighter! 🌟",
-      "Your smile has the power to change someone's day for the better! 😊",
-      "Believe in yourself; you're capable of incredible things! 💪",
-      "You are loved, appreciated, and valued just as you are! ❤️",
-      "Kindness radiates from you, making the world a better place! 🌸"
-    ];
-
-    const prankPhrases = [
-      "tari mani bhosh",
-      "alya lund hu bakchodi kare bhan ne",
-      "tame sodu copy karva ma j rai javana cho",
-      "sodu hu time waste kare",
-      "tari bun ni bhosh"
-    ];
-
-    const randomWholesomeIndex = Math.floor(Math.random() * wholesomePhrases.length);
-    const randomPrankIndex = Math.floor(Math.random() * prankPhrases.length);
-    const displayedText = wholesomePhrases[randomWholesomeIndex];
-    const copiedText = prankPhrases[randomPrankIndex];
-
-    document.getElementById("text").textContent = displayedText;
-
-    function copyText() {
-      navigator.clipboard.writeText(copiedText).then(() => {
-        alert("Copied text will surprise your friend!");
-      }).catch(err => {
-        console.error("Failed to copy text: ", err);
-      });
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
